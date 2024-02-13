@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNC Weather | Previsões Meterelógicas</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/desktop.css">
+</head>
+<body>
+
+    <!--MENU DE NAVEGAÇÃO-->
+
+    <header id="navBar">
+        <h1 id="logo">DncWeather</h1>
+        <nav id="menu">
+            <a href="">Endereços</a>
+            <a href="">Previsão do tempo</a>
+        </nav>
+    </header>
+    
+    <!--CONTEÚDO PRINCIPAL-->
+
+    <main>
+        <section id="presentation">
+            <h2>Descubra Mais com precisão:<br>
+                Previsões do tempo e endereços <br>
+                em tempo real.
+            </h2>
+            <img src="icons/cloudsAndSun.svg" alt="cloudsAndSun">
+        </section>
+
+        <!--FORMULÁRIO-->
+
+        <section id="mainForm">
+            <div id="formConteiner">
+                <form action="POST" id="formLayout">
+                    <div class="inputs">
+                        <label for="firstName">Primeiro Nome:</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="inputs">
+                        <label for="e-mail">E-mail:</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="inputs">
+                        <label for="cep">Digite o CEP:</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="inputs">
+                        <label for="firstName">Digite a latitude e longitude para saber a previsão:</label>
+                        <div>
+                            <input type="text">
+                            <input type="text">
+                        </div>
+                    </div>
+
+                    <button class="inputs">Acessar</button>
+                </form>
+            </div>
+        </section>
+
+        <!--RESULTADOS DO CEP-->
+
+        <section>
+            <div>
+                <h2>Resultado da busca por CEP:</h2>
+                <img src="icons/location.svg" alt="locationPoint">
+            </div>
+            
+            <!--DISPLAY-->
+
+            <div>
+                <div>
+                    <p>Logradouro/Nome</p>
+                    <p>Bairro/Distrito</p>
+                    <p>Localidade/UF</p>
+                </div>
+                <div id="cepResult"></div>
+            </div>
+        </section>
+
+        <!--RESULTADOS DA METEREOLOGIA-->
+
+        <section>
+            <div>
+                <h2>Previsão do tempo na região:</h2>
+                <img src="icons/clouds.svg" alt="clouds">
+            </div>
+            
+            <!--DISPLAY-->
+
+            <div>
+                <span id="meteoResult"></span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <p>Termos de Uso | Política de Privacidade</p>
+        </div>
+    </footer>
+</body>
+</html>

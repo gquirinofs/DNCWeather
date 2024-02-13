@@ -1,0 +1,99 @@
+/* NAV BAR e LOGO */
+
+#navBar {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dncBlue);
+    color: var(--dncWhite);
+}
+
+#logo {
+    font-size: 3.1em;
+    font-weight: 800;
+    padding-left: 2.5vw;
+}
+
+#menu {
+    display: flex;
+    font-size: 1.55em;
+    gap: 2em;
+    padding-right: 2.5vw;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dncWhite);
+    font-weight: 800;
+}
+
+/* Menu Principal */
+
+main {
+    background-color: var(--dncGray);
+    width: 100%;
+}
+
+#presentation {
+    display: flex;
+    justify-content: center;
+    gap: 4vw;
+    padding-top: 20vh;
+}
+
+#presentation h2 {
+    font-size: 3.1em;
+    font-weight: 800;
+}
+
+#presentation img {
+    height: 28.5vh;
+}
+
+/* Formulário */
+
+#mainForm {
+    display: flex;
+    justify-content: center;
+    margin-top: 40vh;
+}
+
+#formConteiner {
+    height: 134.5vh;
+    width: 44.8vw;
+    border-radius: 30px;
+    background-color: var(--dncWhite);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#formLayout {
+    display: flex;
+    flex-direction: column;
+    gap: 6vh;
+    width: 32.82vw;
+}
+
+form input {
+    height: 8vh;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--dncGray);
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1.55em;
+    font-weight: 400;
+}
+
+
+
+
+
