@@ -83,6 +83,8 @@ form input {
     border: none;
     border-radius: 10px;
     background-color: var(--dncGray);
+    padding-left: 2vw;
+    font-size: 0.8em;
 }
 
 .inputs {
@@ -91,6 +93,16 @@ form input {
     gap: 20px;
     font-size: 1.55em;
     font-weight: 400;
+}
+
+#latLongIn {
+    display: flex;
+    justify-content: center;
+    gap: 1.5ch;
+}
+
+.latLong {
+    width: 13.6vw;
 }
 
 #subButton {
@@ -104,8 +116,10 @@ form input {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 6px 4px -1px #7b90f0;
+    box-shadow: 0 6px 4px -1px #a0b2ff;
 }
+
+
 
 
 
