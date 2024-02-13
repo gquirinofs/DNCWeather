@@ -102,7 +102,7 @@ form input {
 }
 
 .latLong {
-    width: 13.6vw;
+    width: 13.7vw;
 }
 
 #subButton {
@@ -117,6 +117,7 @@ form input {
     justify-content: center;
     align-items: center;
     box-shadow: 0 6px 4px -1px #a0b2ff;
+    margin-top: 16vh;
 }
 
 
