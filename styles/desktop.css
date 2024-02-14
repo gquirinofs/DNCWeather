@@ -118,6 +118,7 @@ form input {
     align-items: center;
     box-shadow: 0 6px 4px -1px #a0b2ff;
     margin-top: 16vh;
+    cursor: pointer;
 }
 
 /* Resultado do CEP */
@@ -138,7 +139,6 @@ form input {
 #cepResultEl h2{
     font-size: 3.1em;
     font-weight: 800;
-    padding-left: 3vw;
 }
 
 #cepDisplay{
@@ -177,4 +177,57 @@ form input {
 #cepDisplay p{
     text-align: center;
     width: 20vw;
+}
+
+/* RESULTADO METEREOLÓGICO */
+
+#meteo{
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20vh;
+}
+
+#meteoResult{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#meteoResult h2{
+    font-size: 3.1em;
+    font-weight: 800;
+}
+
+#meteoResult img{
+    height: 14.6vh;
+}
+
+#meteoDisplay{
+    background-color: var(--dncWhite);
+    width: 80vw;
+    height: 10vh;
+    border-radius: 0 0 30px 30px;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--dncBlack);
+    font-weight: 800;
+}
+
+/* RODAPÉ */
+
+footer{
+    background-color: var(--dncBlue);
+    color: var(--dncWhite);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 3vw;
+    font-size: 1.55em;
+    font-weight: 600;
+    height: 12vh;
 }
