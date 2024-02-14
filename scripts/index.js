@@ -15,6 +15,25 @@ async function getAddressByCep() { // Consulta o CEP e apresenta o resultado
     }
 }
 
+async function getTemperature() { // Consulta a temperatura e apresenta o resultado
+    const latitude = document.querySelector('#lat').value;
+    const longitude = document.querySelector('#long').value;
+    try {
+        const response = await fetch (`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m`);
+        const data = await response.json();
+        console.log(data);
+        const temperature = data.current.temperature_2m;
+        document.querySelector('#meteoDisplay').innerHTML = `Previsão de tempo de acordo com a região: ${temperature}ºC`;
+    } catch (error) {
+        alert("Utilize o Google maps para obter a latitude e longitude.");
+    }
+}
+
+function getInfo(){
+    getAddressByCep();
+    getTemperature();
+}
+
 // Previnir a atualização da página
 
 document.querySelector('#subButton').addEventListener("click", function(e){
