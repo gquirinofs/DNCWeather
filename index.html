@@ -34,31 +34,31 @@
 
         <section id="mainForm">
             <div id="formConteiner">
-                <form action="POST" id="formLayout">
+                <form method="get" id="formLayout">
                     <div class="inputs">
                         <label for="firstName">Primeiro Nome:</label>
-                        <input type="text" placeholder="Insira seu primeiro nome:">
+                        <input type="text" id="firstName" placeholder="Insira seu primeiro nome:">
                     </div>
 
                     <div class="inputs">
                         <label for="e-mail">E-mail:</label>
-                        <input type="email" placeholder="Insira seu e-mail">
+                        <input type="email" id="e-mail" placeholder="Insira seu e-mail">
                     </div>
 
                     <div class="inputs">
-                        <label for="cep">Digite o CEP:</label>
-                        <input type="number" required placeholder="Insira o CEP">
+                        <label for="cepValue">Digite o CEP:</label>
+                        <input id="cepValue" name="cep" type="number" required placeholder="Insira o CEP">
                     </div>
 
                     <div class="inputs">
-                        <label for="firstName">Digite a latitude e longitude para saber a previsão:</label>
+                        <label for="lat" for="long">Digite a latitude e longitude para saber a previsão:</label>
                         <div id="latLongIn">
-                            <input class="latLong" required type="text" placeholder="Latitude">
-                            <input class="latLong" required type="text" placeholder="Longitude">
+                            <input class="latLong" id="lat" type="text" placeholder="Latitude">
+                            <input class="latLong" id="long" type="text" placeholder="Longitude">
                         </div>
                     </div>
 
-                    <button class="inputs" id="subButton">Acessar</button>
+                    <button class="inputs" id="subButton" onclick="getAddressByCep()">Acessar</button>
                 </form>
             </div>
         </section>
@@ -80,9 +80,9 @@
                     <p>Localidade/UF</p>
                 </div>
                 <div id="cepAnswer">
-                    <p>Justino Cobra</p>
-                    <p>Vila Ema</p>
-                    <p>SP</p>
+                    <p id="rua">Justino Cobra</p>
+                    <p id="bairro">Vila Ema</p>
+                    <p id="uf">SP</p>
                 </div>
             </div>
         </section>
@@ -110,5 +110,6 @@
             <p>Termos de Uso | Política de Privacidade</p>
         </div>
     </footer>
+    <script src="scripts/index.js"></script>
 </body>
 </html>
