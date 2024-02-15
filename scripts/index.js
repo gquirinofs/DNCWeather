@@ -5,9 +5,10 @@ async function getAddressByCep() { // Consulta o CEP e apresenta o resultado
         const data = await response.json();
         document.querySelector('#rua').innerHTML = data.logradouro;
         document.querySelector('#bairro').innerHTML = data.bairro;
-        document.querySelector('#uf').innerHTML = `${data.localidade}/${data.uf}`;            
+        document.querySelector('#uf').innerHTML = `${data.localidade}/${data.uf}`;
+        alert("Role a página para baixo para ver os resultados!");          
     } catch (error) {
-        alert("O CEP não deve conter: \n\n 1. Caracteres especiais; \n 2. Espaço entre os números; \n 3. CEP Inválido \n\n Tente novamente! ");
+        alert("O CEP não deve conter: \n\n 1. Caracteres especiais; \n 2. Espaço entre os números; \n 3. CEP Inválido. \n\n Tente novamente! ");
     }
 }
 
@@ -34,3 +35,4 @@ function getInfo(){
 document.querySelector('#subButton').addEventListener("click", function(e){
     e.preventDefault()
 });
+
