@@ -23,7 +23,7 @@
     padding-right: 3vw;
 }
 
-nav a {
+.links {
     text-decoration: none;
     color: var(--dncWhite);
     font-weight: 800;
@@ -87,6 +87,11 @@ form input {
     font-size: 0.8em;
 }
 
+form input:focus {
+    border: none;
+    outline: solid var(--dncBlue);
+}
+
 .inputs {
     display: flex;
     flex-direction: column;
@@ -119,6 +124,11 @@ form input {
     box-shadow: 0 6px 4px -1px #a0b2ff;
     margin-top: 16vh;
     cursor: pointer;
+}
+
+#subButton:hover{
+    translate: 0 -4px;
+    transition: 200ms;
 }
 
 /* Resultado do CEP */

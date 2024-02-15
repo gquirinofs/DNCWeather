@@ -3,15 +3,11 @@ async function getAddressByCep() { // Consulta o CEP e apresenta o resultado
     try {
         const response = await fetch (`https://viacep.com.br/ws/${cep}/json/`);
         const data = await response.json();
-        console.log(data);
-        const rua = data.logradouro;
-        const bairro = data.bairro;
-        const localidade = `${data.localidade}/${data.uf}`;
-        document.querySelector('#rua').innerHTML = rua;
-        document.querySelector('#bairro').innerHTML = bairro;
-        document.querySelector('#uf').innerHTML = localidade;
+        document.querySelector('#rua').innerHTML = data.logradouro;
+        document.querySelector('#bairro').innerHTML = data.bairro;
+        document.querySelector('#uf').innerHTML = `${data.localidade}/${data.uf}`;            
     } catch (error) {
-        alert("O CEP não deve conter: \n\n 1. Caracteres especiais; \n 2. Espaço entre os números; \n\n Tente novamente! ");
+        alert("O CEP não deve conter: \n\n 1. Caracteres especiais; \n 2. Espaço entre os números; \n 3. CEP Inválido \n\n Tente novamente! ");
     }
 }
 
@@ -21,7 +17,6 @@ async function getTemperature() { // Consulta a temperatura e apresenta o result
     try {
         const response = await fetch (`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m`);
         const data = await response.json();
-        console.log(data);
         const temperature = data.current.temperature_2m;
         document.querySelector('#meteoDisplay').innerHTML = `Previsão de tempo de acordo com a região: ${temperature}ºC`;
     } catch (error) {
